@@ -1,0 +1,131 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const ensayos = [
+  {
+    title: "La Era del Fracaso",
+    slug: "la-era-del-fracaso",
+    description: "Un resumen valorativo de la historia humana y sus fracasos totales"
+  },
+  {
+    title: "La Historia, la Matrix, el Poder",
+    slug: "la-historia-la-matrix-el-poder", 
+    description: "Sobre el entramado de engaños que sostiene la cúpula gobernante"
+  },
+  {
+    title: "La Angustia: el Núcleo Oculto de la Vida",
+    slug: "la-angustia-el-nucleo-oculto-de-la-vida",
+    description: "Reflexiones sobre el centro invisible de nuestra existencia"
+  },
+  {
+    title: "Los Ciclos",
+    slug: "los-ciclos",
+    description: "Los patrones repetitivos de la condición humana"
+  },
+  {
+    title: "El Bien y el Mal: las Conductas",
+    slug: "el-bien-y-el-mal-las-conductas",
+    description: "La dualidad fundamental de la naturaleza humana"
+  },
+  {
+    title: "La Desaparición: la Vida y la Muerte",
+    slug: "la-desaparicion-la-vida-y-la-muerte",
+    description: "Reflexiones sobre el final y el sentido de la existencia"
+  },
+  {
+    title: "El Amor, el Sexo",
+    slug: "el-amor-el-sexo",
+    description: "Las fuerzas primordiales que mueven al ser humano"
+  },
+  {
+    title: "La Existencia",
+    slug: "la-existencia", 
+    description: "Sobre el hecho mismo de estar en el mundo"
+  },
+  {
+    title: "Religión y Familia",
+    slug: "religion-y-familia",
+    description: "Las instituciones tradicionales y su papel en la sociedad"
+  },
+  {
+    title: "Otras Cosas",
+    slug: "otras-cosas",
+    description: "Reflexiones diversas sobre la vida cotidiana"
+  },
+  {
+    title: "La Belleza",
+    slug: "la-belleza",
+    description: "Sobre la estética y su lugar en la existencia humana"
+  },
+  {
+    title: "Qué Hacemos Ahora",
+    slug: "que-hacemos-ahora",
+    description: "Reflexiones sobre el presente y las decisiones"
+  },
+  {
+    title: "El Dinero, los Pobres",
+    slug: "el-dinero-los-pobres",
+    description: "La economía, la riqueza y la pobreza en la sociedad actual"
+  },
+  {
+    title: "Las Soluciones",
+    slug: "las-soluciones",
+    description: "Propuestas y alternativas para los problemas identificados"
+  }
+];
+---
+
+<MainLayout 
+  title="La Realidad - Guillermo Presti"
+  description="Una serie de ensayos sobre la verdadera naturaleza de la realidad humana, más allá de las ilusiones de la civilización"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-stone-800 mb-4">La Realidad</h1>
+      <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+        Una serie de reflexiones sobre la verdadera naturaleza de la existencia humana, 
+        más allá del teatro de la civilización y sus ilusiones.
+      </p>
+    </header>
+
+    <div class="prose prose-lg prose-stone max-w-none mb-12">
+      <blockquote class="text-center italic text-xl border-l-4 border-stone-600 pl-6 py-4 bg-stone-50 rounded-r-lg">
+        "La realidad de la Naturaleza continúa tal cual detrás de este entramado de fantasías. 
+        Todos lo ven, pero pocos lo aceptan."
+      </blockquote>
+    </div>
+
+    <!-- Lista de ensayos -->
+    <section class="grid gap-6">
+      {ensayos.map((ensayo, index) => (
+        <a href={`/la-realidad/${ensayo.slug}`} 
+           class="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-stone-600">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold mb-2 group-hover:text-stone-600 transition-colors">
+                {index + 1}. {ensayo.title}
+              </h3>
+              <p class="text-stone-600 leading-relaxed">
+                {ensayo.description}
+              </p>
+            </div>
+            <div class="ml-4 text-stone-400 group-hover:text-stone-600 transition-colors">
+              →
+            </div>
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <!-- Navegación -->
+    <nav class="mt-12 flex justify-between">
+      <a href="/" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        ← Volver al inicio
+      </a>
+      <a href="/cuentos" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        Cuentos Cortos →
+      </a>
+    </nav>
+  </div>
+</MainLayout>

@@ -1,0 +1,79 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="Federico Presti - Inventor de la Máquina del Tiempo"
+  description="Los escritos del hijo, inventor de la máquina del tiempo que siempre viaja hacia el futuro"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-stone-800 mb-4">Federico Presti</h1>
+      <p class="text-xl text-stone-600">Inventor de la Máquina del Tiempo</p>
+    </header>
+
+    <article class="prose prose-lg prose-stone max-w-none">
+      <div class="bg-white p-8 rounded-lg shadow-md mb-12">
+        
+        <!-- Biografía -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-stone-800 mb-6 text-center">Biografía</h2>
+          <img src="/images/foto8.png" alt="Guillermo Presti" class="object-cover rounded-lg shadow-md m-auto" loading="lazy" />
+          <div class="space-y-6 text-justify leading-loose">
+            <p class="text-lg">Al igual que su padre, Federico Presti nació a muy temprana edad. Su vida empezó en Buenos Aires y antes de aprender a nadar se fracturó una pierna al caerse en una piscina prácticamente vacía. Sin embargo, eso no le impidió federarse en natación. Aprendió a hacer de todo con esa pierna, incluso a bailar tango.</p>
+
+            <p>Supo ver que ya no es necesario crear pirámides para ser recordado. Que es posible inmortalizar a una persona por sus obras en una simple página web, aquí.</p>
+
+            <p class="text-lg font-medium text-stone-800">
+              Inventor de la máquina del tiempo, encontró la manera de viajar siempre hacia el futuro.
+            </p>
+
+            <p>Las palabras son cápsulas que solo viajan en esa dirección, pero que al leerlas te llevan al pasado. Cualquier persona curiosa que las lea revivirá por un instante, en la lejanía del día de hoy y en cualquier parte del mundo, a aquel o aquella artista que las escribió.</p>
+
+            <p>La historia siempre se repite, aquí Federico deja su huella y espera ser encontrado en otras épocas, con otras costumbres, en cualquier sitio en dónde llegue internet para saludar al lector y desearle un buen día.</p>
+
+            <blockquote class="text-center italic text-2xl border-l-4 border-stone-600 pl-6 py-4 bg-stone-50 rounded-r-lg my-8">
+              "No es al artista a quien deben amar, sino a sus obras."
+            </blockquote>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- Mensaje para el futuro -->
+    <section class="bg-gradient-to-r from-stone-800 to-stone-700 text-white p-8 rounded-lg text-center">
+      <h3 class="text-2xl font-bold mb-4">Mensaje para el Futuro</h3>
+      <p class="text-lg leading-relaxed">
+        Si estás leyendo esto, la máquina del tiempo funcionó. 
+        Has viajado hasta el momento en que estas palabras fueron escritas. 
+        Espero que tengas un buen día, viajero del tiempo.
+      </p>
+      <p class="mt-4 text-stone-300">
+        — Federico Presti, desde el pasado
+      </p>
+      
+    </section>
+
+    <!-- Segunda lectura -->
+    <section class="bg-gradient-to-r from-stone-800 to-stone-700 text-white p-8 rounded-lg text-center mt-10">
+      <a href="/segunda-lectura" class="text-2xl font-bold hover:underline">
+        
+      <h3 class="text-2xl font-bold mb-4">Segunda lectura</h3>
+      <p class="text-lg leading-relaxed">
+        Aquí les dejo una segunda lectura de mails familiares, por si quieren seguir explorando mis pensamientos.
+      </p>      
+      </a>
+    </section>
+
+    <!-- Navegación -->
+    <nav class="mt-12 flex justify-between">
+      <a href="/pensamientos" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        ← Pensamientos
+      </a>
+      <a href="/segunda-lectura" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        Segunda lectura →
+      </a>
+    </nav>
+  </div>
+</MainLayout>

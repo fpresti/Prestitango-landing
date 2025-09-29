@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Los escritos de Guillermo Presti - Un habitante del Universo con residencia temporal en la Tierra" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="h-full bg-stone-50 text-stone-800 font-serif leading-relaxed">
+    <div class="min-h-full flex flex-col">
+      <!-- Header Navigation -->
+      <header class="bg-stone-800 text-stone-100 shadow-lg">
+        <nav class="max-w-6xl mx-auto px-4 py-4">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div class="mb-4 md:mb-0">
+              <a href="/" class="text-2xl font-bold hover:text-stone-300 transition-colors">
+                Guillermo Presti
+              </a>
+              <p class="text-sm text-stone-400 mt-1">Habitante del Universo</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-6 text-sm">
+              <a href="/" class="hover:text-stone-300 transition-colors">Inicio</a>
+              <a href="/mails-perdidos" class="hover:text-stone-300 transition-colors">Mails Perdidos</a>
+              <a href="/la-realidad" class="hover:text-stone-300 transition-colors">La Realidad</a>
+              <a href="/cuentos" class="hover:text-stone-300 transition-colors">Cuentos</a>
+              <a href="/novelas" class="hover:text-stone-300 transition-colors">Novelas</a>
+              <a href="/pensamientos" class="hover:text-stone-300 transition-colors">Pensamientos</a>
+              <a href="/federico-presti" class="hover:text-stone-300 transition-colors">Federico</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1">
+        <slot />
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-stone-800 text-stone-400 py-8 mt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <p class="mb-2">No es a Guillermo Presti a quien deben amar, sino a sus obras.</p>
+          <p class="text-sm">Los escritos de un habitante del Universo con residencia temporal en la Tierra</p>
+          <p class="text-xs mt-4 opacity-60">
+            Sitio preservado con amor por la familia Presti
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

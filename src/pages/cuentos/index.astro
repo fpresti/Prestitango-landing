@@ -1,0 +1,82 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const cuentos = [
+  {
+    title: "Adán y Eva: la Verdad",
+    slug: "adan-y-eva-la-verdad",
+    description: "La verdadera historia de la creación, la estulticia divina y el origen de todos los problemas"
+  },
+  {
+    title: "El Sexo de los Aviones",
+    slug: "el-sexo-de-los-aviones",
+    description: "Una reflexión surrealista sobre la naturaleza de las cosas"
+  },
+  {
+    title: "El Mártir de Roma",
+    slug: "el-martir-de-roma",
+    description: "Un relato sobre el sacrificio y la fe en tiempos antiguos"
+  },
+  {
+    title: "La Conquista de España",
+    slug: "la-conquista-de-espana",
+    description: "Una mirada particular sobre los eventos históricos"
+  }
+];
+---
+
+<MainLayout 
+  title="Cuentos Cortos - Guillermo Presti"
+  description="Relatos breves que van desde la reinterpretación de mitos hasta reflexiones sobre la condición humana"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-stone-800 mb-4">Cuentos Cortos</h1>
+      <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+        Relatos breves que reinterpretan la realidad, desde los mitos fundacionales 
+        hasta las pequeñas grandes verdades de la existencia.
+      </p>
+    </header>
+
+    <div class="prose prose-lg prose-stone max-w-none mb-12">
+      <blockquote class="text-center italic text-xl border-l-4 border-stone-600 pl-6 py-4 bg-stone-50 rounded-r-lg">
+        "Que todo lo dicho, incluso la foto, sea cierto o no, carece de importancia. 
+        Pero, considerando que nada realmente está donde debería estar, 
+        puede aceptarse como casi válida o casi falsa."
+      </blockquote>
+    </div>
+
+    <!-- Lista de cuentos -->
+    <section class="grid gap-6">
+      {cuentos.map((cuento, index) => (
+        <a href={`/cuentos/${cuento.slug}`} 
+           class="group block p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-stone-600">
+          <div class="flex items-start justify-between">
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold mb-3 group-hover:text-stone-600 transition-colors">
+                {cuento.title}
+              </h3>
+              <p class="text-stone-600 leading-relaxed text-lg">
+                {cuento.description}
+              </p>
+            </div>
+            <div class="ml-6 text-2xl text-stone-400 group-hover:text-stone-600 transition-colors">
+              →
+            </div>
+          </div>
+        </a>
+      ))}
+    </section>
+
+    <!-- Navegación -->
+    <nav class="mt-12 flex justify-between">
+      <a href="/la-realidad" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        ← La Realidad
+      </a>
+      <a href="/novelas" class="inline-flex items-center text-stone-600 hover:text-stone-800 transition-colors">
+        Novelas →
+      </a>
+    </nav>
+  </div>
+</MainLayout>
